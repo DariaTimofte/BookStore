@@ -1,0 +1,35 @@
+<div class="content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title" appHightlight>Books</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table tablesorter" id="">
+              <thead class="text-primary">
+                <tr>
+                  <th>Name</th>
+                  <th>Author</th>
+                  <th>Category</th>
+                  <th>Points</th>
+                  <th class="text-center">Price</th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let book of books">
+                <tr>
+                  <td>{{ book.name | namePipe: "Buy":"now!"}}</td>
+                  <td>{{ book.authorId }}</td>
+                  <td>{{ book.authorId }}</td>
+                  <td>{{ book.poits }}</td>
+                  <td class="text-center">${{ book.price }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
